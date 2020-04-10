@@ -9,7 +9,7 @@ namespace BreadthFirstSearch
 
   public class Node
   {
-    public static int Identifier = 0;
+    public static int Identifier = 1;
     public int Id;
     public int Data;
     public Node Left;

@@ -43,6 +43,7 @@ namespace BreadthFirstSearch
 
     static void Main(string[] args)
     {
+      Console.WriteLine("First Test Case");
       Node node1 = new Node();
       Node node2 = new Node();
       Node node3 = new Node();
@@ -59,6 +60,24 @@ namespace BreadthFirstSearch
       node3.Right = node7;
 
       Search(node1);
+
+      Console.WriteLine("Second Test Case");
+      Node node8 = new Node();
+      Node node9 = new Node();
+      Node node10 = new Node();
+      Node node11 = new Node();
+      Node node12 = new Node();
+      Node node13 = new Node();
+      Node node14 = new Node();
+
+      node8.Left = node9;
+      node8.Right = node12;
+      node9.Left = node10;
+      node9.Right = node13;
+      node10.Left = node11;
+      node12.Right = node14;
+
+      Search(node8);
     }
   }
 }
