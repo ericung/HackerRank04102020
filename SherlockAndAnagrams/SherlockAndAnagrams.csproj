@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DDCCB628-3452-4928-9D3A-4755EAF70B53}</ProjectGuid>
+    <ProjectGuid>{BCF5ECC9-8704-4F28-960F-B455976512E6}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>BreadthFirstSearch</RootNamespace>
-    <AssemblyName>BreadthFirstSearch</AssemblyName>
+    <RootNamespace>SherlockAndAnagrams</RootNamespace>
+    <AssemblyName>SherlockAndAnagrams</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,8 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Node.cs" />
-    <Compile Include="BreadthFirstSearch.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

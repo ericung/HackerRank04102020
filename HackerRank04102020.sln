@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackerRank04102020", "HackerRank04102020\HackerRank04102020.csproj", "{63F55840-0098-4636-AB8E-D6D67076F0BE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScratchProject", "HackerRank04102020\ScratchProject.csproj", "{63F55840-0098-4636-AB8E-D6D67076F0BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BreadthFirstSearch", "BreadthFirstSearch\BreadthFirstSearch.csproj", "{DDCCB628-3452-4928-9D3A-4755EAF70B53}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreesAndGraphs", "BreadthFirstSearch\TreesAndGraphs.csproj", "{DDCCB628-3452-4928-9D3A-4755EAF70B53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SherlockAndAnagrams", "SherlockAndAnagrams\SherlockAndAnagrams.csproj", "{BCF5ECC9-8704-4F28-960F-B455976512E6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{DDCCB628-3452-4928-9D3A-4755EAF70B53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDCCB628-3452-4928-9D3A-4755EAF70B53}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDCCB628-3452-4928-9D3A-4755EAF70B53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCF5ECC9-8704-4F28-960F-B455976512E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCF5ECC9-8704-4F28-960F-B455976512E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCF5ECC9-8704-4F28-960F-B455976512E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCF5ECC9-8704-4F28-960F-B455976512E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

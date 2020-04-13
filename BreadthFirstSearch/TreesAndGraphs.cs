@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BreadthFirstSearch
+namespace TreesAndGraphs
 {
-  class BreadthFirstSearch
+  class TreesAndGraphs
   {
-    public static void Search(Node root)
+    public static void BreadthFirstSearch(Node root)
     {
       Queue<Node> queue = new Queue<Node>();
       root.Data = 1;
@@ -41,6 +41,23 @@ namespace BreadthFirstSearch
       }
     }
 
+    public static void DepthFirstSearch(Node root)
+    {
+      if (root == null)
+      {
+        return;
+      }
+
+      if (root.Data == 0)
+      {
+        root.Data = 1;
+        Console.WriteLine("Id: " + root.Id);
+      }
+
+      DepthFirstSearch(root.Left);
+      DepthFirstSearch(root.Right);
+    }
+
     static void Main(string[] args)
     {
       Console.WriteLine("First Test Case");
@@ -59,7 +76,8 @@ namespace BreadthFirstSearch
       node3.Left = node6;
       node3.Right = node7;
 
-      Search(node1);
+      // BreadthFirstSearch(node1);
+      DepthFirstSearch(node1);
 
       Console.WriteLine("Second Test Case");
       Node node8 = new Node();
@@ -77,7 +95,8 @@ namespace BreadthFirstSearch
       node10.Left = node11;
       node12.Right = node14;
 
-      Search(node8);
+      // BreadthFirstSearch(node8);
+      DepthFirstSearch(node8);
     }
   }
 }
