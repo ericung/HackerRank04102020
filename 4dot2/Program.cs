@@ -12,7 +12,7 @@ namespace _4dot2
   class Program
   {
     // Create a leveled binary tree using Breadth First Search
-    static Node CreateBinaryTree(int[] array)
+    static Node CreateMinimalBST(int[] array)
     {
       Node head = new Node();
       Queue queue = new Queue();
@@ -61,6 +61,23 @@ namespace _4dot2
       return head;
     }
 
+    // Solution from the book
+    static Node NodeCreateMinimalBSTRecursive(int[] array, int start, int end)
+    {
+      if (end < start)
+      {
+        return null;
+      }
+
+      int middle = (start + end) / 2;
+      Node head = new Node();
+      head.Value = array[middle];
+      head.Left = NodeCreateMinimalBSTRecursive(array, start, middle - 1);
+      head.Right = NodeCreateMinimalBSTRecursive(array, middle + 1, end);
+      return head;
+    }
+
+    // Print node and the levels
     public static void Print(Node head, int level)
     {
       if (head == null)
@@ -77,13 +94,24 @@ namespace _4dot2
     static void Main()
     {
       int[] array1 = { 1, 2, 4, 5, 6, 7, 10, 11, 23, 24, 27, 29, 39, 41 };
-      Node head1 = CreateBinaryTree(array1);
+      Node head1 = CreateMinimalBST(array1);
       Print(head1, 0);
 
+      Console.WriteLine("&&&&&&&&&&&&&&");
+
+      Node head1r = NodeCreateMinimalBSTRecursive(array1, 0, array1.Length - 1);
+      Print(head1r, 0);
+
+
       Console.WriteLine("=============================================");
-      int[] array2 = { 1, 2, 4, 5 };
-      Node head2 = CreateBinaryTree(array2);
+      int[] array2 = { 1, 2, 4, 5 , 9};
+      Node head2 = CreateMinimalBST(array2);
       Print(head2, 0);
+
+      Console.WriteLine("&&&&&&&&&&&&&&");
+
+      Node head2r = NodeCreateMinimalBSTRecursive(array2, 0, array2.Length - 1);
+      Print(head2r, 0);
     }
   }
 }
