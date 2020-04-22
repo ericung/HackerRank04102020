@@ -12,7 +12,7 @@ using System.Text.RegularExpressions;
 using System.Text;
 using System;
 
-public class Anagram
+class Anagram
 {
   public string Value;
   public Dictionary<char, int> Hash;
@@ -21,76 +21,73 @@ public class Anagram
 class Solution
 {
 
-  // This solution is the brute force version
   // Complete the sherlockAndAnagrams function below.
+  // https://www.hackerrank.com/challenges/sherlock-and-anagrams/
   static int sherlockAndAnagrams(string s)
   {
+    // Keep track of anagrams found and return it at the end.
     int anagramCount = 0;
-    List<List<Anagram>> lengthGroup = new List<List<Anagram>>();
-    for (int i = 0; i < s.Length; i++)
-    {
-      lengthGroup.Add(new List<Anagram>());
-    }
 
-    // enumerate out all the possible derivations of s.
-    for (int i = 0; i < s.Length; i++)
+    for (int length = 1; length < s.Length; length++)
     {
-      for (int j = 1; j <= s.Length; j++)
+      Anagram[] array = new Anagram[s.Length - length + 1];
+
+      for (int i = 0; (i + length) <= s.Length; i++)
       {
-        if ((s.Length - i) - j >= 0)
+        Anagram anagram = new Anagram();
+        anagram.Value = s.Substring(i, length);
+        anagram.Hash = new Dictionary<char, int>();
+
+        // Make a hash map of the string
+        foreach (var c in anagram.Value)
         {
-          Anagram anagram = new Anagram();
-          anagram.Value = s.Substring(i, j);
-          anagram.Hash = new Dictionary<char, int>();
-          foreach (char c in anagram.Value)
+          if (anagram.Hash.ContainsKey(c))
           {
-            if (anagram.Hash.ContainsKey(c))
+            anagram.Hash[c]++;
+          }
+          else
+          {
+            anagram.Hash.Add(c, 1);
+          }
+        }
+
+        // Iterate the list while we are comparing strings of the same length
+        foreach (var arrayItem in array)
+        {
+          bool isAnagram = true;
+
+          if (arrayItem != null)
+          {
+            foreach (var ch in arrayItem.Value)
             {
-              anagram.Hash[c]++;
-            }
-            else
-            {
-              anagram.Hash.Add(c, 1);
+              // Mark the current anagram with the existing list
+              if (anagram.Hash.ContainsKey(ch))
+              {
+                if (anagram.Hash[ch] != arrayItem.Hash[ch])
+                {
+                  isAnagram = false;
+                  break; // Unsure if break only works in first foreach
+                }
+              }
+              else
+              {
+                isAnagram = false;
+                break;
+              }
             }
           }
-
-          lengthGroup[j - 1].Add(anagram);
-        }
-      }
-    }
-
-    // iterate through and compare the values, brute force
-    for (int i = 0; i < s.Length; i++)
-    {
-      for (int j = 0; j < lengthGroup[i].Count; j++)
-      {
-        Anagram item = lengthGroup[i].ElementAt(j);
-        // Console.WriteLine(j + ": " + item.Value);
-        for (int k = j + 1; k < lengthGroup[i].Count; k++)
-        {
-          Anagram compare = lengthGroup[i].ElementAt(k);
-          // Console.WriteLine(j + " : " + k + " = " + compare.Value);
-          bool isAnagram = true;
-          foreach (char e in item.Value)
+          else
           {
-            if (!compare.Hash.ContainsKey(e))
-            {
-              isAnagram = false;
-            }
-            else
-            {
-              if (item.Hash[e] != compare.Hash[e])
-                isAnagram = false;
-            }
+            isAnagram = false;
           }
 
           if (isAnagram)
           {
-            // Console.WriteLine(item.Value + " = " + compare.Value);
             anagramCount++;
           }
         }
-        // Console.WriteLine("================");
+
+        array[i] = anagram;
       }
     }
 
@@ -116,4 +113,3 @@ class Solution
     textWriter.Close();
   }
 }
-
