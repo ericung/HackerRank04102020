@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SherlockAndAnagrams", "Sher
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4dot1", "4dot1\4dot1.csproj", "{A3E91D46-7C7A-4F9C-9795-84A46A4E6B06}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4dot2", "4dot2\4dot2.csproj", "{0E6370C4-BDA0-4503-8C16-596D84A32155}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{A3E91D46-7C7A-4F9C-9795-84A46A4E6B06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3E91D46-7C7A-4F9C-9795-84A46A4E6B06}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3E91D46-7C7A-4F9C-9795-84A46A4E6B06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E6370C4-BDA0-4503-8C16-596D84A32155}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E6370C4-BDA0-4503-8C16-596D84A32155}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E6370C4-BDA0-4503-8C16-596D84A32155}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E6370C4-BDA0-4503-8C16-596D84A32155}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
