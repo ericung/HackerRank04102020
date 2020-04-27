@@ -140,18 +140,44 @@ namespace _4dot7
         Node next = operatorQueue.Dequeue();
         if (!printed.ContainsKey(next.Name))
         {
-          buildOrderQueue.Enqueue(next);
+          Boolean shouldPrint = true;
 
-          foreach(Node child in next.Children)
+          foreach(Node dependent in next.Dependencies)
           {
-            operatorQueue.Enqueue(child);
+            Console.WriteLine(next.Name);
+
+            if (!printed.ContainsKey(dependent.Name))
+            {
+              shouldPrint = false;
+            }
+          }
+
+          if (shouldPrint)
+          {
+            buildOrderQueue.Enqueue(next);
+
+            foreach(Node child in next.Children)
+            {
+              operatorQueue.Enqueue(child);
+            }
+
+            printed[next.Name] = 1;
+          }
+          else
+          {
+            operatorQueue.Enqueue(next);
           }
         }
-
-        printed[next.Name] = 1;
       }
 
-      return buildOrderQueue;
+      if (buildOrderQueue.Count != arrayOfNodes.Length)
+      {
+        throw new Exception("Cycle in graph");
+      }
+      else
+      {
+        return buildOrderQueue;
+      }
     }
     
 
@@ -177,6 +203,21 @@ namespace _4dot7
           printStatus[children.Name] = 1;
         }
       }
+    }
+
+    public static void PrintQueue(Queue<Node> queue)
+    {
+      String printString = String.Empty;
+      while(queue.Count > 0)
+      {
+        printString += queue.Dequeue().Name;
+        if (queue.Count >= 1)
+        {
+          printString += " ";
+        }
+      }
+
+      Console.WriteLine(printString);
     }
   }
 }
