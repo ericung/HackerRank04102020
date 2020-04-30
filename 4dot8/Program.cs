@@ -80,8 +80,6 @@ namespace _4dot8
         return new Result(root, true);
       }
 
-      Console.WriteLine("root: "+ root.Value + "| a: " + p.Value + " | b: " + q.Value);
-
       Result rx = CommonAncestorHelper(root.Left, p, q);
       if (rx.IsAncestor)
       {
@@ -104,15 +102,6 @@ namespace _4dot8
          * subtree, then this is truly an ancestor and the flag should be true.
          */
         Boolean isAncestor = rx.Node != null || ry.Node != null;
-        if (rx.Node != null)
-        {
-          Console.WriteLine("2rx: " + rx.Node.Value + " : " + rx.IsAncestor + " : " + isAncestor);
-        }
-
-        if (ry.Node != null)
-        {
-          Console.WriteLine("2ry: " + ry.Node.Value + " : " + ry.IsAncestor + " : " + isAncestor);
-        }
         return new Result(root, isAncestor);
       }
       else
