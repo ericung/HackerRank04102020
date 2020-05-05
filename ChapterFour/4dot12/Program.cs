@@ -66,7 +66,6 @@ namespace _4dot12
       Console.WriteLine(paths);
 
       /* This problem is similar to Depth First Search. */
-
     }
   }
 }
