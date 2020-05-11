@@ -49,7 +49,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8dot4", "ChapterEight\8dot4
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8dot5", "ChapterEight\8dot5\8dot5.csproj", "{9622EAF5-7F9B-4AB8-AEEA-1072006557A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8dot6", "8dot6\8dot6.csproj", "{1CFA8361-F905-4524-B073-5FB47A357FFB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8dot6", "ChapterEight\8dot6\8dot6.csproj", "{1CFA8361-F905-4524-B073-5FB47A357FFB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
