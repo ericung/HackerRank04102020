@@ -44,6 +44,7 @@ namespace _8dot4
       set.Add(3);
       set.Add(4);
       set.Add(5);
+      set.Add(6);
       List<List<int>> product = getSubsets(set, 0);
 
       foreach(var subset in product)
