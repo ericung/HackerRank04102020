@@ -55,6 +55,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8dot7", "ChapterEight\8dot7
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountingTriplets", "CountingTriplets\CountingTriplets.csproj", "{C281A4FF-70BD-4FF4-BF52-B270DFE3E510}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8dot8", "ChapterEight\8dot8\8dot8.csproj", "{FED561BE-6C22-4BE7-B1E5-D97A0EC5CE08}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -157,6 +159,10 @@ Global
 		{C281A4FF-70BD-4FF4-BF52-B270DFE3E510}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C281A4FF-70BD-4FF4-BF52-B270DFE3E510}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C281A4FF-70BD-4FF4-BF52-B270DFE3E510}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FED561BE-6C22-4BE7-B1E5-D97A0EC5CE08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FED561BE-6C22-4BE7-B1E5-D97A0EC5CE08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FED561BE-6C22-4BE7-B1E5-D97A0EC5CE08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FED561BE-6C22-4BE7-B1E5-D97A0EC5CE08}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -182,6 +188,7 @@ Global
 		{9622EAF5-7F9B-4AB8-AEEA-1072006557A0} = {8E210ECA-78AE-4A05-9E2B-62E8FE8DE3D5}
 		{1CFA8361-F905-4524-B073-5FB47A357FFB} = {8E210ECA-78AE-4A05-9E2B-62E8FE8DE3D5}
 		{B737C46E-3B0A-4D17-AC42-07CEB296BCD1} = {8E210ECA-78AE-4A05-9E2B-62E8FE8DE3D5}
+		{FED561BE-6C22-4BE7-B1E5-D97A0EC5CE08} = {8E210ECA-78AE-4A05-9E2B-62E8FE8DE3D5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B104F68A-DCCE-44CB-8A5F-4D178C312D48}

@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _8dot7
+namespace _8dot8
 {
   class Program
   {
-    public static List<String> getPerms(String remainder)
+    List<String> getPerms(String remainder)
     {
       int len = remainder.Length;
       List<String> result = new List<String>();
@@ -23,16 +23,7 @@ namespace _8dot7
       {
         /* Remove char i and find  permutations of remaining chars. */
         String before = remainder.Substring(0, i);
-        int endLength = len - 1 - i - 1;
-        String after;
-        if (endLength > 0)
-        {
-          after = remainder.Substring(i + 1, endLength);
-        }
-        else
-        {
-          after = String.Empty;
-        }
+        String after = remainder.Substring(i + 1, len);
         List<String> partials = getPerms(before + after);
 
         /* Prepend char i to each permutation. */
@@ -44,15 +35,8 @@ namespace _8dot7
 
       return result;
     }
-
     static void Main(string[] args)
     {
-      var result = getPerms("hayworld");
-
-      foreach(var item in result)
-      {
-        Console.WriteLine(item);
-      }
     }
   }
 }
