@@ -23,7 +23,7 @@ namespace _8dot7
       {
         /* Remove char i and find  permutations of remaining chars. */
         String before = remainder.Substring(0, i);
-        int endLength = len - 1 - i - 1;
+        int endLength = len - i - 1;
         String after;
         if (endLength > 0)
         {
@@ -47,12 +47,14 @@ namespace _8dot7
 
     static void Main(string[] args)
     {
-      var result = getPerms("hayworld");
+      var result = getPerms("hayw");
 
       foreach(var item in result)
       {
         Console.WriteLine(item);
       }
+
+      Console.WriteLine(result.Count);
     }
   }
 }
