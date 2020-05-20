@@ -10,6 +10,8 @@ namespace HackerRank04102020
   {
     static void Main(string[] args)
     {
+      int a = 'a';
+      Console.WriteLine(a);
     }
   }
 }
